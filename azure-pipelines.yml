@@ -20,3 +20,10 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: AzureSpringCloud@0
+  inputs:
+    azureSubscription: 'CldSol Gruppe 04(b84cb496-d01e-44a5-b206-99a6db5ccf22)'
+    Action: 'Deploy'
+    AzureSpringCloud: 'customer-mgmt-backend2'
+    AppName: 'customer-mgmt-backend'
+    UseStagingDeployment: true
